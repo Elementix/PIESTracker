@@ -46,7 +46,6 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom styles for mobile optimization */
     body { background-color: #f0f4f8; }
     .section { display: none; }
     .section.active { display: block; }
@@ -55,15 +54,24 @@
     select, input, textarea { width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
     button { width: 100%; padding: 10px; }
     .delete-btn { padding: 4px 8px; font-size: 0.75rem; }
+    .nav-btn { padding: 6px 12px; font-size: 0.875rem; } /* Smaller buttons for export/import */
+    .file-input { display: none; }
   </style>
 </head>
 <body class="font-sans text-gray-800">
   <!-- Navigation -->
   <nav class="bg-blue-600 text-white p-4 sticky top-0 z-10">
-    <div class="flex justify-around">
-      <button onclick="showSection('daily')" class="px-4 py-2 hover:bg-blue-700 rounded">Daily Tracker</button>
-      <button onclick="showSection('weekly')" class="px-4 py-2 hover:bg-blue-700 rounded">Weekly Check-In</button>
-      <button onclick="showSection('end')" class="px-4 py-2 hover:bg-blue-700 rounded">End of 30 Days</button>
+    <div class="flex flex-wrap justify-between items-center">
+      <div class="flex space-x-2">
+        <button onclick="showSection('daily')" class="px-4 py-2 hover:bg-blue-700 rounded">Daily Tracker</button>
+        <button onclick="showSection('weekly')" class="px-4 py-2 hover:bg-blue-700 rounded">Weekly Check-In</button>
+        <button onclick="showSection('end')" class="px-4 py-2 hover:bg-blue-700 rounded">End of 30 Days</button>
+      </div>
+      <div class="flex space-x-2 mt-2 sm:mt-0">
+        <button onclick="exportData()" class="nav-btn bg-gray-500 hover:bg-gray-600 rounded">Export</button>
+        <label for="import-file" class="nav-btn bg-teal-500 hover:bg-teal-600 rounded cursor-pointer text-center">Import</label>
+        <input type="file" id="import-file" class="file-input" accept=".json" onchange="importData(event)">
+      </div>
     </div>
   </nav>
 
@@ -199,7 +207,7 @@
       <h2 class="text-lg font-semibold toggle-btn" onclick="toggleSection('end-form')">Add Final Reflection</h2>
       <div id="end-form" class="mt-2">
         <form id="end-reflection-form">
-          <div class="mb-4">
+          <div class="mb-4>
             <label class="block text-sm font-medium">Category</label>
             <select id="end-category" required>
               <option value="Physical">Physical</option>
@@ -368,7 +376,7 @@
       const score = document.getElementById('daily-score').value;
       const note = document.getElementById('daily-note').value;
 
-      // Check for existing entry for the same category and date
+      // Check for existing entry
       const existingEntry = dailyEntries.find(
         entry => entry.date === date && entry.category === category
       );
@@ -421,6 +429,67 @@
       thankYouNote = document.getElementById('thank-you-note').value;
       localStorage.setItem('thankYouNote', thankYouNote);
       renderEndEntries();
+    }
+
+    // Export data to JSON file
+    function exportData() {
+      const data = {
+        dailyEntries: dailyEntries,
+        weeklyEntries: weeklyEntries,
+        endEntries: endEntries,
+        thankYouNote: thankYouNote
+      };
+      const json = JSON.stringify(data, null, 2);
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'pies-tracker-data.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    // Import data from JSON file
+    function importData(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      if (!file.name.endsWith('.json')) {
+        alert('Please select a valid JSON file.');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const data = JSON.parse(e.target.result);
+          // Validate data structure
+          if (
+            Array.isArray(data.dailyEntries) &&
+            Array.isArray(data.weeklyEntries) &&
+            Array.isArray(data.endEntries) &&
+            typeof data.thankYouNote === 'string'
+          ) {
+            dailyEntries = data.dailyEntries;
+            weeklyEntries = data.weeklyEntries;
+            endEntries = data.endEntries;
+            thankYouNote = data.thankYouNote;
+            localStorage.setItem('dailyEntries', JSON.stringify(dailyEntries));
+            localStorage.setItem('weeklyEntries', JSON.stringify(weeklyEntries));
+            localStorage.setItem('endEntries', JSON.stringify(endEntries));
+            localStorage.setItem('thankYouNote', thankYouNote);
+            renderDailyEntries();
+            renderWeeklyEntries();
+            renderEndEntries();
+            alert('Data imported successfully!');
+          } else {
+            alert('Invalid data format in JSON file.');
+          }
+        } catch (err) {
+          alert('Error parsing JSON file: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+      // Reset file input
+      event.target.value = '';
     }
 
     // Initial render
