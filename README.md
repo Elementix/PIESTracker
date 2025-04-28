@@ -1,18 +1,31 @@
-Didn't want to use paper, so I had Grok create a web-based version of a PIES tracker.
+PIES Tracker (Web App)
 
- <strong>Note:</strong> Data is stored in your browser and may be lost if you clear browsing data (e.g., cookies and site data in Chrome). Export your data regularly to avoid accidental loss.
+A web-based tool to track your progress in the PIES model, created by Grok as an alternative to paper-based tracking.
 
-<br/>
-The PIES model, used by Marriage Helper, is a framework for understanding and building attraction in a relationship.
+Note: Data is stored in your browser's local storage and may be lost if you clear browsing data (e.g., cookies and site data in Chrome). Export your data regularly to avoid accidental loss.
 
-It stands for Physical, Intellectual, Emotional, and Spiritual attraction.
+What is the PIES Model?
 
-By working on yourself in these four areas, individuals can enhance their attraction and/or strengthen their relationship. 
+The PIES model, developed by Marriage Helper, is a framework for understanding and building attraction in relationships. It stands for:
 
-<ul><li>Physical Attraction:</li></ul> This encompasses physical appearance, health, and the physical expressions of affection. 
 
-<ul><li>Intellectual Attraction:</li></ul> This involves shared interests, engaging conversations, and the ability to spark intellectual curiosity in each other. 
 
-<ul><li>Emotional Attraction:</li></ul> This refers to the ability to evoke positive emotions in each other, creating a sense of connection and emotional safety. 
 
-<ul><li>Spiritual Attraction:</li></ul> This includes shared values, beliefs, and a sense of purpose that aligns the couple's spiritual dimensions. 
+
+Physical Attraction: Encompasses physical appearance, health, and expressions of affection.
+
+
+
+Intellectual Attraction: Involves shared interests, engaging conversations, and sparking intellectual curiosity.
+
+
+
+Emotional Attraction: Refers to evoking positive emotions, fostering connection, and creating emotional safety.
+
+
+
+Spiritual Attraction: Includes shared values, beliefs, and a sense of aligned purpose.
+
+
+
+By focusing on personal growth in these four areas, individuals can enhance their attraction and strengthen their relationships.
