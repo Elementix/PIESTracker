@@ -14,4 +14,4 @@ It stands for:
 - **Emotional Attraction**: Refers to evoking positive emotions, fostering connection, and creating emotional safety.
 - **Spiritual Attraction**: Includes shared values, beliefs, and a sense of aligned purpose.
 
-By focusing on personal growth in these four areas, individuals can enhance their attraction and strengthen their relationships.
+By focusing on personal growth in these four areas, individuals can enhance their attraction and/or strengthen their relationships.
