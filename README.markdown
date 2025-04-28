@@ -2,7 +2,7 @@
 
 A web-based tool to track your progress in the PIES model, created by Grok as an alternative to paper-based tracking.
 
-**Note:** Data is stored in your browser's local storage and may be lost if you clear browsing data (e.g., cookies and site data in Chrome). Export your data regularly to avoid accidental loss.
+**Note:** Data is stored in your browser's local storage and may be lost if you clear browsing data (e.g., cookies, site data, etc.). Export your data regularly to avoid accidental loss.
 
 ## What is the PIES Model?
 
