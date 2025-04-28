@@ -1,4 +1,4 @@
-# PIES Tracker Web App
+# PIES Tracker (Web App)
 
 A web-based tool to track your progress in the PIES model, created by Grok as an alternative to paper-based tracking.
 
