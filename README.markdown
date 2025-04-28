@@ -6,8 +6,9 @@ A web-based tool to track your progress in the PIES model, created by Grok as an
 
 ## What is the PIES Model?
 
-The PIES model, developed by [Marriage Helper](https://marriagehelper.com/), is a framework for understanding and building attraction in relationships. It stands for:
+The PIES model, developed by [Marriage Helper](https://marriagehelper.com/), is a framework for understanding and building attraction in relationships.
 
+It stands for:
 - **Physical Attraction**: Encompasses physical appearance, health, and expressions of affection.
 - **Intellectual Attraction**: Involves shared interests, engaging conversations, and sparking intellectual curiosity.
 - **Emotional Attraction**: Refers to evoking positive emotions, fostering connection, and creating emotional safety.
