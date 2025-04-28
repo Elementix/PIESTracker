@@ -9,14 +9,10 @@ It stands for Physical, Intellectual, Emotional, and Spiritual attraction.
 
 By working on yourself in these four areas, individuals can enhance their attraction and/or strengthen their relationship. 
 
-<ul><li>Physical Attraction:</li></ul>
-This encompasses physical appearance, health, and the physical expressions of affection. 
+<ul><li>Physical Attraction:</li></ul> This encompasses physical appearance, health, and the physical expressions of affection. 
 
-<ul><li>Intellectual Attraction:</li></ul>
-This involves shared interests, engaging conversations, and the ability to spark intellectual curiosity in each other. 
+<ul><li>Intellectual Attraction:</li></ul> This involves shared interests, engaging conversations, and the ability to spark intellectual curiosity in each other. 
 
-<ul><li>Emotional Attraction:</li></ul>
-This refers to the ability to evoke positive emotions in each other, creating a sense of connection and emotional safety. 
+<ul><li>Emotional Attraction:</li></ul> This refers to the ability to evoke positive emotions in each other, creating a sense of connection and emotional safety. 
 
-<ul><li>Spiritual Attraction:</li></ul>
-This includes shared values, beliefs, and a sense of purpose that aligns the couple's spiritual dimensions. 
+<ul><li>Spiritual Attraction:</li></ul> This includes shared values, beliefs, and a sense of purpose that aligns the couple's spiritual dimensions. 
