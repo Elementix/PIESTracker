@@ -1,9 +1,8 @@
 Didn't want to use paper, so I had Grok create a web-based version of a PIES tracker.
 
  <strong>Note:</strong> Data is stored in your browser and may be lost if you clear browsing data (e.g., cookies and site data in Chrome). Export your data regularly to avoid accidental loss.
-
-
-
+<br>
+<br>
 
 The PIES model, used by Marriage Helper, is a framework for understanding and building attraction in a relationship.
 
